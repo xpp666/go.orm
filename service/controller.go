@@ -20,7 +20,7 @@ func QueryUserById(w rest.ResponseWriter, r *rest.Request) {
 
 	userInfo, err := FindUserByID(userId)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 		//操作失败返回结果
 		returnJson["code"] = 1
 		returnJson["msg"] = err.Error()
@@ -47,7 +47,7 @@ func Register(w rest.ResponseWriter, r *rest.Request)  {
 	fmt.Println(user)
 	b, err := AddUser(user)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 		//操作失败返回结果
 		returnJson["code"] = 1
 		returnJson["msg"] = err.Error()
@@ -73,7 +73,7 @@ func DeleteUser(w rest.ResponseWriter, r *rest.Request) {
 	//通过gorm操作数据库
 	b, err := DelByID(userId)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 		//操作失败返回结果
 		returnJson["code"] = 1
 		returnJson["msg"] = err.Error()
@@ -98,7 +98,7 @@ func Update(w rest.ResponseWriter, r *rest.Request)  {
 	fmt.Println(user)
 	b, err := UpdateUserByID(&user)
 	if err != nil {
-		log.Fatal(err)
+		log.Println(err)
 		//操作失败返回结果
 		returnJson["code"] = 1
 		returnJson["msg"] = err.Error()
