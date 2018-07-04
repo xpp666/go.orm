@@ -18,6 +18,7 @@ func main() {
 		rest.Get("/query/:id", service.QueryUserById),
 		rest.Delete("/delete/:id", service.DeleteUser),
 		rest.Put("/update",service.Update),
+		rest.Get("/list", service.QueryAllUser),
 	)
 	if err != nil {
 		fmt.Println("err=>", err)

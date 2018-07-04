@@ -1,6 +1,6 @@
 {
     "mysql_host": "42.62.51.57",
-    "mysql_port": "30008",
+    "mysql_port": "30009",
     "mysql_user": "root",
     "mysql_password": "root123",
     "database_name": "xupan",
